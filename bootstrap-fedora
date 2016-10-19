@@ -1,0 +1,110 @@
+#! /usr/bin/env bash
+
+# globals
+INSTALL_REPO='dnf --nogpgcheck install -y'
+INSTALL_PKG='dnf install -y'
+PACKAGE_LIST=(
+	brasero
+	exiv2
+	htop
+	nmap
+	soundconverter
+	virt-manager
+	chromium
+    clamav
+    clamav-update
+    ctags
+    dconf-editor
+    deja-dup
+    digikam
+    emacs	
+    encfs
+    epson-inkjet-printer-escpr
+    exfalso
+    filezilla
+	flash-plugin
+    gimp
+    gnome-mud
+    gnome-tweak-tool
+    gparted
+    gstreamer-plugins-*
+    gstreamer1-plugins-*
+    i8kutils
+    inkscape
+    kipi-plugins
+    libdvdcss
+    libdvdnav
+    libdvdread
+    libkipi
+    libvirt
+    livecd-tools
+    liveusb-creator
+    lm_sensors
+	mozilla-adblockplus
+	mozilla-noscript
+	ncurses-devel
+    openssl-devel
+    pdfgrep	
+    pgadmin3
+    postgresql
+    postgresql-devel	
+    postgresql-server
+    pv
+    python-pip
+    python-virtualenv
+    python3-virtualenv
+    rapid-photo-downloader
+    samba
+    simple-scan	
+    sqlite-devel
+    sshfs
+    thunderbird
+    tmux
+    tracker-preferences
+    transmission
+    unrar
+    unzip
+    uuid
+    vlc
+    xchm
+)
+
+function main {
+    verify_if_running_as_root
+    add_repositories
+    update_distro
+    install_packages
+}
+
+function verify_if_running_as_root {
+    if (( $EUID != 0 )); then
+	echo "${0##*/}: Please run the script as root."
+	exit
+    fi
+}
+	
+function add_repositories {
+    # rpmfusion-free repo
+    $INSTALL_REPO http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm
+
+    # rpmfusion-nonfree repo
+    $INSTALL_REPO http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm
+
+	## Adobe Repository 64-bit x86_64 ##
+	rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
+	rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux
+}
+
+function update_distro {
+    dnf update -y
+}
+    
+function install_packages {
+    for p in "${PACKAGE_LIST[@]}"
+    do
+	$INSTALL_PKG $p
+    done
+}
+
+# execute script
+main
