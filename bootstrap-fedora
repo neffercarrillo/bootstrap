@@ -71,8 +71,8 @@ PACKAGE_LIST=(
 
 function main {
     verify_if_running_as_root
-    add_repositories
     update_distro
+    add_repositories
     install_packages
 }
 
@@ -81,6 +81,10 @@ function verify_if_running_as_root {
 	echo "${0##*/}: Please run the script as root."
 	exit
     fi
+}
+
+function update_distro {
+    dnf update -y
 }
 	
 function add_repositories {
@@ -93,10 +97,6 @@ function add_repositories {
 	## Adobe Repository 64-bit x86_64 ##
 	rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
 	rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux
-}
-
-function update_distro {
-    dnf update -y
 }
     
 function install_packages {
