@@ -42,6 +42,7 @@ PACKAGE_LIST=(
     lm_sensors
 	mozilla-adblockplus
 	mozilla-noscript
+	mplayer
 	ncurses-devel
     openssl-devel
     pdfgrep	
