@@ -4,34 +4,31 @@
 INSTALL_REPO='dnf --nogpgcheck install -y'
 INSTALL_PKG='dnf install -y'
 PACKAGE_LIST=(
-	brasero
-	exiv2
-	htop
-	nmap
-	soundconverter
-	virt-manager
-	chromium
+    brasero
+    chromium
     clamav
     clamav-update
     ctags
     dconf-editor
     deja-dup
     digikam
-    emacs	
+    emacs    
     encfs
     epson-inkjet-printer-escpr
     exfalso
+    exiv2
     filezilla
-	flash-plugin
+    flash-plugin
     gimp
     gnome-mud
     gnome-tweak-tool
     gparted
     gstreamer-plugins-*
     gstreamer1-plugins-*
+    htop
     i8kutils
     inkscape
-	keypassx
+    keepassx
     kipi-plugins
     libdvdcss
     libdvdnav
@@ -41,15 +38,16 @@ PACKAGE_LIST=(
     livecd-tools
     liveusb-creator
     lm_sensors
-	mozilla-adblockplus
-	mozilla-noscript
-	mplayer
-	ncurses-devel
+    mozilla-adblockplus
+    mozilla-noscript
+    mplayer
+    ncurses-devel
+    nmap
     openssl-devel
-    pdfgrep	
+    pdfgrep    
     pgadmin3
     postgresql
-    postgresql-devel	
+    postgresql-devel    
     postgresql-server
     pv
     python-pip
@@ -57,7 +55,8 @@ PACKAGE_LIST=(
     python3-virtualenv
     rapid-photo-downloader
     samba
-    simple-scan	
+    simple-scan    
+    soundconverter
     sqlite-devel
     sshfs
     thunderbird
@@ -67,6 +66,7 @@ PACKAGE_LIST=(
     unrar
     unzip
     uuid
+    virt-manager
     vlc
     xchm
 )
