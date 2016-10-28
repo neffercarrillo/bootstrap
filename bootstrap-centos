@@ -25,6 +25,7 @@ PACKAGE_LIST=(
     htop
     i8kutils
     inkscape
+    keepassx
     kipi-plugins
     libdvdcss
     libdvdnav
@@ -33,6 +34,7 @@ PACKAGE_LIST=(
     libvirt
     livecd-tools
     lm_sensors
+    mplayer
     ncurses-devel
     nmap
     openssl-devel
@@ -44,8 +46,8 @@ PACKAGE_LIST=(
     pv
     python-pip
     python-virtualenv
-    python34
     python3-virtualenv
+    python34
     rapid-photo-downloader
     rdesktop
     samba
