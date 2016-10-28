@@ -11,7 +11,7 @@ PACKAGE_LIST=(
     dconf-editor
     deja-dup
     digikam
-    emacs	
+    emacs   
     encfs
     epson-inkjet-printer-escpr
     exfalso
@@ -36,10 +36,10 @@ PACKAGE_LIST=(
     ncurses-devel
     nmap
     openssl-devel
-    pdfgrep	
+    pdfgrep 
     pgadmin3
     postgresql
-    postgresql-devel	
+    postgresql-devel    
     postgresql-server
     pv
     python-pip
@@ -49,7 +49,7 @@ PACKAGE_LIST=(
     rapid-photo-downloader
     rdesktop
     samba
-    simple-scan	
+    simple-scan 
     soundconverter
     sqlite-devel
     sshfs
@@ -75,27 +75,27 @@ function main {
 
 function verify_if_running_as_root {
     if (( $EUID != 0 )); then
-	echo "${0##*/}: Please run the script as root."
-	exit
+        echo "${0##*/}: Please run the script as root."
+        exit
     fi
 }
 
 function update_distro {
     yum update -y
 }
-	
+    
 function add_repositories {
-	# EPEL repo
-	yum install -y epel-release
-	
-	# nux-desktop
-	rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
+    # EPEL repo
+    yum install -y epel-release
+    
+    # nux-desktop
+    rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
 }
    
 function install_packages {
     for p in "${PACKAGE_LIST[@]}"
     do
-	$INSTALL_PKG $p
+        $INSTALL_PKG $p
     done
 }
 
