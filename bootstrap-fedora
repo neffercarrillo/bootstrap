@@ -80,8 +80,8 @@ function main {
 
 function verify_if_running_as_root {
     if (( $EUID != 0 )); then
-    echo "${0##*/}: Please run the script as root."
-    exit
+		echo "${0##*/}: Please run the script as root."
+		exit
     fi
 }
 
