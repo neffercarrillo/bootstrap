@@ -19,6 +19,7 @@ PACKAGE_LIST=(
     exiv2
     filezilla
     flash-plugin
+    fish
     gimp
     gnome-mud
     gnome-tweak-tool
