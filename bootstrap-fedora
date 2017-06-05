@@ -29,6 +29,7 @@ PACKAGE_LIST=(
     htop
     i8kutils
     inkscape
+	iptables-service
     keepassx
     kipi-plugins
     libdvdcss
@@ -77,6 +78,7 @@ function main {
     update_distro
     add_repositories
     install_packages
+	enable_iptables
 }
 
 function verify_if_running_as_root {
@@ -107,6 +109,12 @@ function install_packages {
     do
         $INSTALL_PKG $p
     done
+}
+
+function enable_iptables {
+	systemctl mask firewalld.service
+	systemctl enable iptables.service
+	systemctl enable ip6tables.service
 }
 
 # execute script
