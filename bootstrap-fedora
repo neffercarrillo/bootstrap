@@ -62,7 +62,7 @@ function main {
     update_distro
     add_repositories
     install_packages
-	enable_iptables
+    enable_iptables
 }
 
 function verify_if_running_as_root {
