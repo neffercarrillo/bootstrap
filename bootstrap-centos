@@ -10,7 +10,6 @@ PACKAGE_LIST=(
     ctags
     dconf-editor
     deja-dup
-    digikam
     emacs   
     encfs
     epson-inkjet-printer-escpr
@@ -23,47 +22,26 @@ PACKAGE_LIST=(
     gstreamer-plugins-*
     gstreamer1-plugins-*
     htop
-    i8kutils
     inkscape
     keepassx
-    kipi-plugins
     libdvdcss
     libdvdnav
     libdvdread
-    libkipi
     libvirt
     livecd-tools
-    lm_sensors
     mplayer
     ncurses-devel
-    nmap
     openssl-devel
     pdfgrep 
-    pgadmin3
-    postgresql
-    postgresql-devel    
-    postgresql-server
-    pv
-    python-pip
-    python-virtualenv
-    python3-virtualenv
-    python34
-    rapid-photo-downloader
-    rdesktop
-    samba
     simple-scan 
     soundconverter
-    sqlite-devel
     sshfs
-    thunderbird
     tmux
     tracker-preferences
     transmission
     unrar
     unzip
     uuid
-    virt-install
-    virt-manager
     vlc
     xchm
 )
