@@ -25,7 +25,7 @@ PACKAGE_LIST=(
     gstreamer1-plugins-*
     htop
     inkscape
-    iptables-service
+    iptables-services
     keepassx
     libdvdcss
     libdvdnav
