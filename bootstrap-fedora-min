@@ -4,35 +4,16 @@
 INSTALL_REPO='dnf --nogpgcheck install -y'
 INSTALL_PKG='dnf install -y'
 PACKAGE_LIST=(
-    ctags
-    dconf-editor
-    emacs    
-    encfs
-    filezilla
-    gimp
-    gnome-tweak-tool
-    gparted
-    htop
+    flash-plugin
     keepassx
-    libvirt
     mozilla-adblockplus
     mozilla-noscript
-    ncurses-devel
-    nmap
-    openssl-devel
-    pdfgrep    
-    pv
+    mozilla-https-everywhere
     python-pip
     python-virtualenv
     python3-virtualenv
     sqlite-devel
-    sshfs
     tmux
-    transmission
-    unrar
-    unzip
-    uuid
-    virt-manager
 )
 
 function main {
