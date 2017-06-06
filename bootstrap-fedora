@@ -93,9 +93,9 @@ function install_packages {
 }
 
 function enable_iptables {
-	systemctl mask firewalld.service
-	systemctl enable iptables.service
-	systemctl enable ip6tables.service
+    systemctl mask firewalld.service
+    systemctl enable iptables.service
+    systemctl enable ip6tables.service
 }
 
 # execute script
