@@ -11,15 +11,12 @@ PACKAGE_LIST=(
     ctags
     dconf-editor
     deja-dup
-    digikam
     emacs    
     encfs
     epson-inkjet-printer-escpr
     exfalso
     exiv2
     filezilla
-    flash-plugin
-    fish
     gimp
     gnome-mud
     gnome-tweak-tool
@@ -27,41 +24,28 @@ PACKAGE_LIST=(
     gstreamer-plugins-*
     gstreamer1-plugins-*
     htop
-    i8kutils
     inkscape
-	iptables-service
+    iptables-service
     keepassx
-    kipi-plugins
     libdvdcss
     libdvdnav
     libdvdread
-    libkipi
     libvirt
     livecd-tools
     liveusb-creator
     lm_sensors
     mozilla-adblockplus
     mozilla-noscript
+    mozilla-https-everywhere
     mplayer
     ncurses-devel
-    nmap
     openssl-devel
     pdfgrep    
-    pgadmin3
-    postgresql
-    postgresql-devel    
-    postgresql-server
     pv
-    python-pip
-    python-virtualenv
-    python3-virtualenv
     rapid-photo-downloader
-    samba
     simple-scan    
     soundconverter
-    sqlite-devel
     sshfs
-    thunderbird
     tmux
     tracker-preferences
     transmission
