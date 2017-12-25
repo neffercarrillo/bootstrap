@@ -40,7 +40,6 @@ PACKAGE_LIST=(
     ncurses-devel
     openssl-devel
     pdfgrep    
-    pv
     rapid-photo-downloader
     simple-scan    
     sshfs
