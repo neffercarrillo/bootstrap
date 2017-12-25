@@ -5,6 +5,7 @@ INSTALL_REPO='dnf --nogpgcheck install -y'
 INSTALL_PKG='dnf install -y'
 PACKAGE_LIST=(
     brasero
+    xchm
     chromium
     clamav
     clamav-update
@@ -25,7 +26,6 @@ PACKAGE_LIST=(
     gstreamer1-plugins-*
     htop
     inkscape
-    iptables-services
     keepassx
     libdvdcss
     libdvdnav
@@ -54,7 +54,6 @@ PACKAGE_LIST=(
     uuid
     virt-manager
     vlc
-    xchm
 )
 
 function main {
@@ -62,7 +61,6 @@ function main {
     update_distro
     add_repositories
     install_packages
-    enable_iptables
 }
 
 function verify_if_running_as_root {
@@ -92,11 +90,6 @@ function install_packages {
     done
 }
 
-function enable_iptables {
-    systemctl mask firewalld.service
-    systemctl enable iptables.service
-    systemctl enable ip6tables.service
-}
 
 # execute script
 main
