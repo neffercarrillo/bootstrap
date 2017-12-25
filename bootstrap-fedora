@@ -43,7 +43,6 @@ PACKAGE_LIST=(
     pv
     rapid-photo-downloader
     simple-scan    
-    soundconverter
     sshfs
     tmux
     tracker-preferences
