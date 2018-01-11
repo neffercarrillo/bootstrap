@@ -17,6 +17,7 @@ PACKAGE_LIST=(
     exiv2
     filezilla
     gimp
+    google-chrome-stable
     gnome-mud
     gnome-tweak-tool
     gparted
