@@ -92,6 +92,10 @@ gpgcheck=1
 gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
 EOF
 
+    # Adobe Flash Player Repository 64-bit x86_64
+    rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
+    rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux
+    
 }
     
 function install_packages {
