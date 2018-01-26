@@ -26,6 +26,7 @@ PACKAGE_LIST=(
     htop
     inkscape
     keepassx
+    labyrinth
     libdvdcss
     libdvdnav
     libdvdread
