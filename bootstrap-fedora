@@ -52,6 +52,7 @@ PACKAGE_LIST=(
     uuid
     virt-manager
     vlc
+    vagrant
 )
 
 function main {
