@@ -13,12 +13,10 @@ PACKAGE_LIST=(
     emacs    
     encfs
     epson-inkjet-printer-escpr
-    exfalso
     exiv2
     filezilla
     gimp
     google-chrome-stable
-    gnome-mud
     gnome-tweak-tool
     gparted
     gstreamer-plugins-*
@@ -33,7 +31,6 @@ PACKAGE_LIST=(
     libvirt
     livecd-tools
     liveusb-creator
-    lm_sensors
     mozilla-adblockplus
     mozilla-noscript
     mozilla-https-everywhere
