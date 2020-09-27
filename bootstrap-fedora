@@ -21,6 +21,7 @@ PACKAGE_LIST=(
     gparted
     gstreamer-plugins-*
     gstreamer1-plugins-*
+    gthumb
     htop
     inkscape
     keepassx
