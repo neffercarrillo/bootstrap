@@ -10,7 +10,6 @@ PACKAGE_LIST=(
     ctags
     dconf-editor
     deja-dup
-    digikam
     emacs    
     encfs
     epson-inkjet-printer-escpr
@@ -41,7 +40,8 @@ PACKAGE_LIST=(
     openssl-devel
     pdfgrep    
     rapid-photo-downloader
-    simple-scan    
+    simple-scan
+    shotwell
     sshfs
     tmux
     tracker-preferences
