@@ -4,6 +4,7 @@
 INSTALL_REPO='dnf --nogpgcheck install -y'
 INSTALL_PKG='dnf install -y'
 PACKAGE_LIST=(
+    rpmfusion-free-release-tainted
     brasero
     clamav
     clamav-update
@@ -43,6 +44,8 @@ PACKAGE_LIST=(
     simple-scan
     shotwell
     sshfs
+    tintin
+    tintin-doc
     tmux
     tracker-preferences
     transmission
@@ -79,6 +82,8 @@ function add_repositories {
     # rpmfusion-nonfree repo
     $INSTALL_REPO http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm
 
+    # rpmfusion-nonfree 
+    
     # microsoft vs code
     rpm --import https://packages.microsoft.com/keys/microsoft.asc
     sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
@@ -93,10 +98,6 @@ gpgcheck=1
 gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
 EOF
 
-    # Adobe Flash Player Repository 64-bit x86_64
-    rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
-    rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux
-    
 }
     
 function install_packages {
