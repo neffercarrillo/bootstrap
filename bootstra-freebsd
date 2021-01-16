@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 
 # globals
-INSTALL_PKG='dnf install -y'
+INSTALL_PKG='pkg install -y'
 PACKAGE_LIST=(
         emacs
         tintin++
@@ -9,6 +9,7 @@ PACKAGE_LIST=(
         irssi
         rsync
         tmux
+        git
 )
 
 function main {
