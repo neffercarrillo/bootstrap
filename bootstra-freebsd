@@ -1,0 +1,39 @@
+#! /usr/bin/env bash
+
+# globals
+INSTALL_PKG='dnf install -y'
+PACKAGE_LIST=(
+        emacs
+        tintin++
+        znc
+        irssi
+        rsync
+        tmux
+)
+
+function main {
+    verify_if_running_as_root
+    update_os
+    install_packages
+}
+
+function verify_if_running_as_root {
+    if (( $EUID != 0 )); then
+        echo "${0##*/}: Please run the script as root."
+        exit
+    fi
+}
+
+function update_os {
+   pkg update
+}
+
+function install_packages {
+    for p in "${PACKAGE_LIST[@]}"
+    do
+        $INSTALL_PKG $p
+    done
+}
+
+# execute script
+main

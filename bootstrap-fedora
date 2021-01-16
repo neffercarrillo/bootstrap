@@ -59,7 +59,7 @@ PACKAGE_LIST=(
 
 function main {
     verify_if_running_as_root
-    update_distro
+    update_os
     add_repositories
     install_packages
 }
@@ -71,7 +71,7 @@ function verify_if_running_as_root {
     fi
 }
 
-function update_distro {
+function update_os {
     dnf update -y
 }
     
