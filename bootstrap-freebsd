@@ -20,6 +20,8 @@ function main {
     configure_firewall
     set_timezone
     configure_ntp
+    configure_new_user
+    update_sshd
 }
 
 function verify_if_running_as_root {
@@ -62,6 +64,24 @@ function configure_ntp {
     sysrc ntpd_sync_on_start="YES"
     service ntpd start
 }
+
+function configure_new_user {
+    # create new user and add to wheel group(s)
+    echo "give me a username: "
+    read username
+    adduser -G wheel $username
+}
+
+function configure_ssh {
+    # mkdir /home/$username/.ssh
+    mkdir /home/$username/.ssh
+    # copy root/.ssh/authorized_keys to /home/$username/.ssh/
+    # change group of /home/$username/.ssh/authorized_keys to chown $username:$username
+    # update 
+    # disable root login -> PermitRootLogin no
+    # disable password login
+}
+
 
 # execute script
 main
