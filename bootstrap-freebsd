@@ -20,7 +20,7 @@ function main {
     set_timezone
     configure_ntp
     configure_new_user
-    update_sshd
+    configure_sshd
 }
 
 function verify_if_running_as_root {
@@ -71,7 +71,7 @@ function configure_new_user {
     adduser -G wheel $username
 }
 
-function configure_ssh {    
+function configure_sshd {    
     cp ~/.ssh/ /home/$username/.ssh/
     chown -R $username:$username /home/$username/.ssh/
     sed -i  s/PermitRootLogin yes/PermitRootLogin no/ /etc/sshd/sshd_config
