@@ -74,8 +74,7 @@ function configure_new_user {
 function configure_sshd {    
     cp ~/.ssh/ /home/$username/.ssh/
     chown -R $username:$username /home/$username/.ssh/
-    sed -i  s/PermitRootLogin yes/PermitRootLogin no/ /etc/sshd/sshd_config
-    sed -i  s/PasswordAuthentication yes/PasswordAuthentication no/ /etc/sshd/sshd_config
+    sed -i 's/PermitRootLogin\swithout-password/PermitRootLogin\sno/' /etc/sshd/sshd_config
 }
 
 
