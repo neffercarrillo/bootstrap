@@ -5,7 +5,6 @@ INSTALL_PKG='pkg install -y'
 PACKAGE_LIST=(
         emacs
         tintin++
-        znc
         irssi
         rsync
         tmux
@@ -72,14 +71,11 @@ function configure_new_user {
     adduser -G wheel $username
 }
 
-function configure_ssh {
-    # mkdir /home/$username/.ssh
-    mkdir /home/$username/.ssh
-    # copy root/.ssh/authorized_keys to /home/$username/.ssh/
-    # change group of /home/$username/.ssh/authorized_keys to chown $username:$username
-    # update 
-    # disable root login -> PermitRootLogin no
-    # disable password login
+function configure_ssh {    
+    cp ~/.ssh/ /home/$username/.ssh/
+    chown -R $username:$username /home/$username/.ssh/
+    sed -i  s/PermitRootLogin yes/PermitRootLogin no/ /etc/sshd/sshd_config
+    sed -i  s/PasswordAuthentication yes/PasswordAuthentication no/ /etc/sshd/sshd_config
 }
 
 
