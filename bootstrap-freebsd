@@ -66,9 +66,7 @@ function configure_ntp {
 
 function configure_new_user {
     # create new user and add to wheel group(s)
-    echo "give me a username: "
-    read username
-    adduser -G wheel $username
+     adduser -G wheel
 }
 
 function configure_sshd {    
