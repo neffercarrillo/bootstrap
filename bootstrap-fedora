@@ -33,7 +33,7 @@ PACKAGE_LIST=(
     libvirt
     livecd-tools
     liveusb-creator
-    mozilla-adblockplus
+    mozilla-ublock-origin
     mozilla-noscript
     mozilla-https-everywhere
     mplayer
