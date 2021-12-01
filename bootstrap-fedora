@@ -4,10 +4,10 @@
 INSTALL_REPO='dnf --nogpgcheck install -y'
 INSTALL_PKG='dnf install -y'
 PACKAGE_LIST=(
-    rpmfusion-free-release-tainted
     brasero
     clamav
     clamav-update
+    code
     ctags
     dconf-editor
     deja-dup
@@ -38,6 +38,7 @@ PACKAGE_LIST=(
     mozilla-https-everywhere
     mplayer
     ncurses-devel
+    nodejs
     openssl-devel
     pdfgrep    
     rapid-photo-downloader
@@ -77,12 +78,10 @@ function update_os {
     
 function add_repositories {
     # rpmfusion-free repo
-    $INSTALL_REPO http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm
+    $INSTALL_REPO https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm 
 
     # rpmfusion-nonfree repo
-    $INSTALL_REPO http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm
-
-    # rpmfusion-nonfree 
+    $INSTALL_REPO https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
     
     # microsoft vs code
     rpm --import https://packages.microsoft.com/keys/microsoft.asc
