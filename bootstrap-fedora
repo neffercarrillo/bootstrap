@@ -4,6 +4,7 @@
 INSTALL_REPO='dnf --nogpgcheck install -y'
 INSTALL_PKG='dnf install -y'
 PACKAGE_LIST=(
+    rpmfusion-free-release-tainted
     brasero
     clamav
     clamav-update
@@ -25,8 +26,6 @@ PACKAGE_LIST=(
     gthumb
     htop
     inkscape
-    keepassx
-    labyrinth
     libdvdcss
     libdvdnav
     libdvdread
@@ -36,8 +35,6 @@ PACKAGE_LIST=(
     mozilla-ublock-origin
     mozilla-noscript
     mozilla-https-everywhere
-    mplayer
-    ncurses-devel
     nodejs
     openssl-devel
     pdfgrep    
@@ -48,14 +45,11 @@ PACKAGE_LIST=(
     tintin
     tintin-doc
     tmux
-    tracker-preferences
-    transmission
     unrar
     unzip
     uuid
     virt-manager
     vlc
-    vagrant
 )
 
 function main {
