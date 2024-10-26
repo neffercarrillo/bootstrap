@@ -35,6 +35,7 @@ PACKAGE_LIST=(
     mpv
     shotwell
     wl-copy
+    cups
 )
 
 # check if script running as root. if not, exit.
