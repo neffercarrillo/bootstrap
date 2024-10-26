@@ -33,47 +33,30 @@ PACKAGE_LIST=(
     simple-scan
     ttf-mscorefonts-installer
     mpv
+    shotwell
 )
 
-function main {
-    verify_if_running_as_root
-    update_os
-    update_repositories
-    install_packages
-    update_groups
-    configure_firewall
-}
+# check if script running as root. if not, exit.
+if (( $EUID != 0 )); then
+    echo "${0##*/}: Please run the script as root."
+    exit
+fi
 
-function verify_if_running_as_root {
-    if (( $EUID != 0 )); then
-        echo "${0##*/}: Please run the script as root."
-        exit
-    fi
-}
+# modify sources to include contrib
+perl -p -i -e 's/main/main contrib/' /etc/apt/sources.list
 
-function update_os {
-    apt update && apt upgrade -y
-}
+# update sources and upgrade distro
+apt update && apt upgrade -y
 
-function update_repositories {
-    perl -p -i -e 's/main/main contrib/' /etc/apt/sources.list
-}
+# install packages
+for p in "${PACKAGE_LIST[@]}"
+do
+    apt install -y $p
+done
 
-function install_packages {
-   for p in "${PACKAGE_LIST[@]}"
-    do
-        apt install -y $p
-    done
-}
+# add user to groups relevant to virtualization
+usermod -aG libvirt,libvirt-qemu,kvm $USER
 
-function update_groups {
-    usermod -aG libvirt,libvirt-qemu,kvm $USER
-}
-
-function configure_firewall {
-    ufw enable
-    ufw logging on
-}
-
-# execute script
-main
+# enable host firewall
+ufw enable
+ufw logging on
