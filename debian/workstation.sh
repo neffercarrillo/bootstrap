@@ -34,6 +34,7 @@ PACKAGE_LIST=(
     ttf-mscorefonts-installer
     mpv
     shotwell
+    wl-copy
 )
 
 # check if script running as root. if not, exit.
