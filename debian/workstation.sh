@@ -32,6 +32,7 @@ PACKAGE_LIST=(
     gnome-tweaks
     simple-scan
     ttf-mscorefonts-installer
+    mpv
 )
 
 function main {
