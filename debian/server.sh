@@ -15,6 +15,7 @@ PACKAGE_LIST=(
     tmux
     newsboat
     irssi
+    tree
 )
 
 # check if script running as root. if not, exit.

@@ -36,6 +36,7 @@ PACKAGE_LIST=(
     shotwell
     wl-copy
     cups
+    tree
 )
 
 # check if script running as root. if not, exit.
