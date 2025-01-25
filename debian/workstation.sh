@@ -33,10 +33,11 @@ PACKAGE_LIST=(
     simple-scan
     ttf-mscorefonts-installer
     mpv
-    shotwell
+    digikam
     wl-copy
     cups
     tree
+    tmux
 )
 
 # check if script running as root. if not, exit.
