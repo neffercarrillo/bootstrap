@@ -38,6 +38,7 @@ PACKAGE_LIST=(
     cups
     tree
     tmux
+    wl-clipboard
 )
 
 # check if script running as root. if not, exit.
