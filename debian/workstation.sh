@@ -39,6 +39,8 @@ PACKAGE_LIST=(
     tree
     tmux
     wl-clipboard
+    keepassxc
+    webext-keepassxc-browser
 )
 
 # check if script running as root. if not, exit.
