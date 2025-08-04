@@ -41,6 +41,7 @@ PACKAGE_LIST=(
     wl-clipboard
     keepassxc
     webext-keepassxc-browser
+    zbar-tools
 )
 
 # check if script running as root. if not, exit.
