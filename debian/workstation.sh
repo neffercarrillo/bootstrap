@@ -42,6 +42,8 @@ PACKAGE_LIST=(
     keepassxc
     webext-keepassxc-browser
     zbar-tools
+    sqlite3
+    sqlitebrowser
 )
 
 # check if script running as root. if not, exit.
