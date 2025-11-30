@@ -22,17 +22,17 @@ PACKAGE_LIST=(
     tree
     tmux
     sqlite3
-	virt-manager
+    virt-manager
     sqlitebrowser
-	vlc
+    vlc
     filezilla
-	gimp
-	inkscape
-	rapid-photo-downloader
-	libreoffice
-	keepassxc
-	webext-ublock-origin-firefox
-	webext-keepassxc-browser
+    gimp
+    inkscape
+    rapid-photo-downloader
+    libreoffice
+    keepassxc
+    webext-ublock-origin-firefox
+    webext-keepassxc-browser
 )
 
 # check if script running as root. if not, exit.
@@ -59,3 +59,6 @@ usermod -aG libvirt,libvirt-qemu,kvm $USER
 # enable host firewall
 ufw enable
 ufw logging on
+
+# TODO fix interfaces file
+# TODO add shortcut to workspaces 1-9
