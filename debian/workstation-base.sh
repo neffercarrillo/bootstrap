@@ -61,4 +61,4 @@ ufw enable
 ufw logging on
 
 # TODO fix interfaces file
-# TODO add shortcut to workspaces 1-9
+
