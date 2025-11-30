@@ -2,48 +2,37 @@
 
 # globals
 PACKAGE_LIST=(
-    gnome-core
     firmware-realtek
     firmware-amd-graphics
     firmware-atheros
     emacs
     ufw
-    virt-manager
     git
-    vlc
-    deja-dup
-    brasero
-    encfs
     printer-driver-escpr
-    filezilla
-    gimp
-    inkscape
-    webext-ublock-origin-firefox
     pdfgrep
-    rapid-photo-downloader
-    sshfs
     unrar-free
     htop
     make
     gcc
     podman
-    libreoffice
-    dconf-editor
-    gnome-tweaks
-    simple-scan
     ttf-mscorefonts-installer
     mpv
-    digikam
-    wl-copy
+    wl-clipboard
     cups
     tree
     tmux
-    wl-clipboard
-    keepassxc
-    webext-keepassxc-browser
-    zbar-tools
     sqlite3
+	virt-manager
     sqlitebrowser
+	vlc
+    filezilla
+	gimp
+	inkscape
+	rapid-photo-downloader
+	libreoffice
+	keepassxc
+	webext-ublock-origin-firefox
+	webext-keepassxc-browser
 )
 
 # check if script running as root. if not, exit.
