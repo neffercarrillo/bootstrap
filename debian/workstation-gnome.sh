@@ -8,6 +8,7 @@ PACKAGE_LIST=(
 	dconf-editor
 	simple-scan
         libreoffice-gnome
+        seahorse-nautilus
 )
 
 # install packages
