@@ -7,6 +7,7 @@ PACKAGE_LIST=(
 	gnome-tweaks
 	dconf-editor
 	simple-scan
+        libreoffice-gnome
 )
 
 # install packages
