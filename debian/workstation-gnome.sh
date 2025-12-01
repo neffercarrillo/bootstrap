@@ -9,6 +9,7 @@ PACKAGE_LIST=(
 	simple-scan
         libreoffice-gnome
         seahorse-nautilus
+        shotwell
 )
 
 # install packages
