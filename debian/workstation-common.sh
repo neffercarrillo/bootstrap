@@ -48,8 +48,7 @@ perl -p -i -e 's/main/main contrib/' /etc/apt/sources.list
 apt update && apt upgrade -y
 
 # install packages
-for p in "${PACKAGE_LIST[@]}"
-do
+for p in "${PACKAGE_LIST[@]}" do
     apt install -y $p
 done
 

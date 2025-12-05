@@ -12,9 +12,13 @@ PACKAGE_LIST=(
         shotwell
 )
 
+# install common workstation apps
+if [ -f ./workstation-common.sh ]; then
+    bash ./workstation-common.sh
+fi
+
 # install packages
-for p in "${PACKAGE_LIST[@]}"
-do
+for p in "${PACKAGE_LIST[@]}" do
     apt install -y $p
 done
 
