@@ -6,6 +6,7 @@ PACKAGE_LIST=(
 	digikam
 	skanpage
 	libreoffice-plasma
+        okular
 )
 
 # install common workstation apps
