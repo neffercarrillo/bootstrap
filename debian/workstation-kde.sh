@@ -7,6 +7,7 @@ PACKAGE_LIST=(
 	skanpage
 	libreoffice-plasma
         okular
+        kleopatra
 )
 
 # install common workstation apps
