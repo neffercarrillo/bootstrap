@@ -8,7 +8,16 @@ PACKAGE_LIST=(
 	libreoffice-plasma
         okular
         kleopatra
+        system-config-printer
+        krita
+        kolourpaint
 )
+
+# check if script running as root. if not, exit.
+if (( $EUID != 0 )); then
+    echo "${0##*/}: Please run the script as root."
+    exit
+fi
 
 # install common workstation apps
 if [ -f ./workstation-common.sh ]; then

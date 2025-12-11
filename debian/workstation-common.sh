@@ -48,12 +48,16 @@ perl -p -i -e 's/main/main contrib/' /etc/apt/sources.list
 apt update && apt upgrade -y
 
 # install packages
-for p in "${PACKAGE_LIST[@]}" do
+for p in "${PACKAGE_LIST[@]}"
+do
     apt install -y $p
 done
 
 # add user to groups relevant to virtualization
 usermod -aG libvirt,libvirt-qemu,kvm $USER
+
+# add usre to printer group
+usermod -aG lpadmin $USER
 
 # enable host firewall
 ufw enable
