@@ -11,6 +11,7 @@ PACKAGE_LIST=(
         system-config-printer
         krita
         kolourpaint
+        ksshaskpass
 )
 
 # check if script running as root. if not, exit.
