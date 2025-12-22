@@ -24,7 +24,6 @@ PACKAGE_LIST=(
     sqlite3
     virt-manager
     sqlitebrowser
-    vlc
     filezilla
     gimp
     inkscape
@@ -33,6 +32,7 @@ PACKAGE_LIST=(
     keepassxc
     webext-ublock-origin-firefox
     webext-keepassxc-browser
+    chromium
 )
 
 # check if script running as root. if not, exit.
