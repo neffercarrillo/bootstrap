@@ -54,10 +54,10 @@ do
 done
 
 # add user to groups relevant to virtualization
-usermod -aG libvirt,libvirt-qemu,kvm $USER
+usermod -aG libvirt,libvirt-qemu,kvm $SUDO_USER
 
 # add usre to printer group
-usermod -aG lpadmin $USER
+usermod -aG lpadmin $SUDO_USER
 
 # enable host firewall
 ufw enable
