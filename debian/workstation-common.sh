@@ -33,6 +33,7 @@ PACKAGE_LIST=(
     webext-ublock-origin-firefox
     webext-keepassxc-browser
     chromium
+    thunderbird
 )
 
 # check if script running as root. if not, exit.
