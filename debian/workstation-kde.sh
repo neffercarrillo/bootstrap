@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 PACKAGE_LIST=(
-	kde-plasma-desktop
+	kde-standard
 	gwenview
 	digikam
 	skanpage
@@ -26,7 +26,8 @@ if [ -f ./workstation-common.sh ]; then
 fi
 
 # install packages
-for p in "${PACKAGE_LIST[@]}" do
+for p in "${PACKAGE_LIST[@]}"
+do
     apt install -y $p
 done
 
