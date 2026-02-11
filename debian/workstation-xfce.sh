@@ -16,7 +16,8 @@ if [ -f ./workstation-common.sh ]; then
 fi
 
 # install packages
-for p in "${PACKAGE_LIST[@]}" do
+for p in "${PACKAGE_LIST[@]}"
+do
     apt install -y $p
 done
 
