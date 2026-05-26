@@ -34,6 +34,7 @@ PACKAGE_LIST=(
     webext-keepassxc-browser
     chromium
     thunderbird
+    vim
 )
 
 # check if script running as root. if not, exit.
