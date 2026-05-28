@@ -35,6 +35,7 @@ PACKAGE_LIST=(
     chromium
     thunderbird
     vim
+    golang
 )
 
 # check if script running as root. if not, exit.
