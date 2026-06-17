@@ -37,6 +37,7 @@ PACKAGE_LIST=(
     vim
     golang
     gh
+    pass
 )
 
 # check if script running as root. if not, exit.
