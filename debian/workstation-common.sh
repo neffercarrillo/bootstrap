@@ -38,6 +38,7 @@ PACKAGE_LIST=(
     golang
     gh
     pass
+    clamav
 )
 
 # check if script running as root. if not, exit.
