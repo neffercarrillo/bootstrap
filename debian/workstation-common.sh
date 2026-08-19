@@ -39,6 +39,9 @@ PACKAGE_LIST=(
     gh
     pass
     clamav
+    unattended-upgrades
+    apt-listchanges
+    needrestart
 )
 
 # check if script running as root. if not, exit.
@@ -68,6 +71,9 @@ usermod -aG lpadmin $SUDO_USER
 # enable host firewall
 ufw enable
 ufw logging on
+
+# set up unattended upgrades
+dpkg-reconfigure unattended-upgrades
 
 # TODO fix interfaces file
 
