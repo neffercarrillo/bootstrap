@@ -12,6 +12,7 @@ PACKAGE_LIST=(
         krita
         kolourpaint
         ksshaskpass
+        kamoso
 )
 
 # check if script running as root. if not, exit.
