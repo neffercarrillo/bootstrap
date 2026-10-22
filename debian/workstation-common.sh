@@ -42,6 +42,7 @@ PACKAGE_LIST=(
     unattended-upgrades
     apt-listchanges
     needrestart
+    nmap
 )
 
 # check if script running as root. if not, exit.
