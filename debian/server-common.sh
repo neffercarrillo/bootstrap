@@ -3,7 +3,7 @@
 # globals
 PACKAGE_LIST=(
     vim
-    emacs
+    emacs-nox
     ufw
     git
     htop
@@ -16,6 +16,7 @@ PACKAGE_LIST=(
     newsboat
     irssi
     tree
+    nmap
 )
 
 # check if script running as root. if not, exit.
