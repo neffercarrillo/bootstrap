@@ -43,6 +43,7 @@ PACKAGE_LIST=(
     apt-listchanges
     needrestart
     nmap
+    cryfs
 )
 
 # check if script running as root. if not, exit.
